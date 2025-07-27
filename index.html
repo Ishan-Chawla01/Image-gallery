@@ -1,142 +1,93 @@
-<!DOCTYPE HTML>
-<!--
-	Multiverse by Ishan, inspired from the original design by HTML5 UP
-	https://html5up.net/multiverse (linked to the original design)
-	-->
-<html>
-	<head>
-		<title>Universe</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Gallery</title>
+</head>
+<body style="background-color: #000000; color: #ffffff; url('D:\all_frontend_HTML_CSS_Bootstrap\Website(ytbasic)\1.png')">
+    <div class="heading">
+        <h1>Image Gallery</h1>
+    </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240311163321/Types-of-Wastes-(Banner).webp"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240311163321/Types-of-Wastes-(Banner).webp')"
+                 data-author-name="Jane Doe"
+                 data-author-email="jane.doe@example.com">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240311125007/Invertebrates-(Banner).webp"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240311125007/Invertebrates-(Banner).webp')"
+                 data-author-name="John Smith"
+                 data-author-email="john.smith@example.com">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240311120816/GBlog-banner.webp"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240311120816/GBlog-banner.webp')"
+                 data-author-name="Alice Brown"
+                 data-author-email="alice.b@example.com">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240308123700/Layers-of-Atmosphere-Banner-02.webp"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240308123700/Layers-of-Atmosphere-Banner-02.webp')"
+                 data-author-name="Bob White"
+                 data-author-email="bob.w@example.com">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240307180031/List-of-Rocket-Launching-Stations-in-India---banner.webp"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240307180031/List-of-Rocket-Launching-Stations-in-India---banner.webp')"
+                 data-author-name="Charlie Green"
+                 data-author-email="charlie.g@example.com">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240215134226/Russia-Banner-copy-2.webp"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240215134226/Russia-Banner-copy-2.webp')"
+                 data-author-name="Diana Prince"
+                 data-author-email="diana.p@example.com">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240226155245/girl-dog-names-banner.webp"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240226155245/girl-dog-names-banner.webp')"
+                 data-author-name="Ethan Hunt"
+                 data-author-email="ethan.h@example.com">
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240215151423/Types-of-Microscope-(Banner).png"
+                 onclick="openModal('https://media.geeksforgeeks.org/wp-content/uploads/20240215151423/Types-of-Microscope-(Banner).png')"
+                 data-author-name="Fiona Glenn"
+                 data-author-email="fiona.g@example.com">
+        </div>
+    </div>
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html"><strong>Universe</strong> Ishan Chawla</a></h1>
-						<nav>
-							<ul>
-								<li><a href="#footer" class="icon solid fa-info-circle">Sign up</a></li>
-							</ul>
-						</nav>
-					</header>
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-info">
+            <p id="modalAuthorName"></p>
+            <p id="modalAuthorEmail"></p>
+        </div>
+    </div>
 
-				<!-- Main -->
-					<div id="main">
-						<article class="thumb">
-							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="" /></a>
-							<h2>Magna feugiat lorem</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt="" /></a>
-							<h2>Nisl adipiscing</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt="" /></a>
-							<h2>Tempus aliquam veroeros</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt="" /></a>
-							<h2>Aliquam ipsum sed dolore</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt="" /></a>
-							<h2>Cursis aliquam nisl</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>Sed consequat phasellus</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt="" /></a>
-							<h2>Mauris id tellus arcu</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt="" /></a>
-							<h2>Nunc vehicula id nulla</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/09.jpg" class="image"><img src="images/thumbs/09.jpg" alt="" /></a>
-							<h2>Neque et faucibus viverra</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/10.jpg" alt="" /></a>
-							<h2>Mattis ante fermentum</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/11.jpg" class="image"><img src="images/thumbs/11.jpg" alt="" /></a>
-							<h2>Sed ac elementum arcu</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/12.jpg" class="image"><img src="images/thumbs/12.jpg" alt="" /></a>
-							<h2>Vehicula id nulla dignissim</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-					</div>
+    <div class="form" style="background-color: #000000;">
+        <h2 class="heading" style="color:orange">Add Your Image</h2>
+        <input type="email" id="authorEmail" name="authorEmail" placeholder="Your Email">
+        <input type="text" id="authorName" name="authorName" placeholder="Your Name">
+        <input type="text" id="imageAlt" name="imageAlt" placeholder="Image Description (Alt Text)">
+        <label for="imageUpload" class="file-upload-label" style="color:orange; font-family:algerian;">
+            Choose an Image File
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+        </label>
+        <div id="imagePreviewContainer" style="margin-top: 10px; max-width: 200px; max-height: 200px; overflow: hidden; margin: 10px auto;">
+            <img id="imagePreview" src="" alt="Image Preview" style="width: 100%; height: auto; display: none; border-radius: 4px;">
+        </div>
+        <p style="text-align: center; margin: 10px 0;">OR</p>
+        <input type="url" id="imageUrl" name="imageUrl" placeholder="Enter Image URL (Optional)">
+        <button class="cn" onclick="submitImage();">Submit Image</button>
+    </div>
 
-				<!-- Footer -->
-					<footer id="footer" class="panel">
-						<div class="inner split">
-							<div>
-								<section>
-									<h2>Sign in to start adding your images</h2>
-									<p>Yes, you can add images to this website if you feel they are worth being shown up here, but before you unleash your creative potential, we would just like to collect a bit of information about you</p>
-								</section>
-								<p class="copyright">
-									&copy;  Design: Ishan Chawla, inspired from original design by html 5up.
-								</p>
-							</div>
-							<div>
-								<section>
-									<h2>Sign in form</h2>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<input type="text" name="name" id="name" placeholder="Name" />
-											</div>
-											<div class="field half">
-												<input type="text" name="email" id="email" placeholder="Email" />
-											</div>
-											<div class="field half">
-												<textarea name="image" id="message" rows="4" placeholder="Your image here please"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit"id="submission" value="Send" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-							</div>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/form.js"></script>
-
-	</body>
+    <script src="script.js"></script>
+</body>
 </html>

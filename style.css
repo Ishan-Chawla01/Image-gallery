@@ -1,0 +1,217 @@
+/* Basic Gallery Layout */
+.heading{
+    color: orange; 
+    text-shadow: yellow 2px 2px ;
+    font-family: 'algerian';
+    text-decoration: underline;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust column size as needed */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: white;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop images to fit */
+    display: block;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* New: Styles for modal info */
+.modal-info {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+.modal-info p {
+    margin: 5px 0;
+}
+
+/* Form Styling */
+.form {
+    background-color: #f4f4f4;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form input[type="email"],
+.form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form input::placeholder {
+    color: #aaa;
+}
+
+.form .cn { /* Submit button */
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.form .cn:hover {
+    background-color: #0056b3;
+}
+/* Existing CSS for gallery and modal... */
+
+/* New styles for file upload label */
+.file-upload-label {
+    display: inline-block;
+    background-color: #fff; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background-color: grey;
+}
+
+/* Styles for the form itself and its inputs */
+.form {
+    background-color: #f4f4f4;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form input[type="email"],
+.form input[type="text"],
+.form input[type="url"] { /* Added url type */
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form input::placeholder {
+    color: #000000;
+}
+
+.form .cn { /* Submit button */
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Add some space above the button */
+}
+
+.form .cn:hover {
+    background-color: #0056b3;
+}
+
+/* New: Styles for modal info */
+.modal-info {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+.modal-info p {
+    margin: 5px 0;
+}
